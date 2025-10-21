@@ -67,7 +67,7 @@ erDiagram
     TEXT result
     DATETIME(6) created_at
   }
-  KEY_ROTATION_JOBS }o--|| USERS : (executed_by)
+  KEY_ROTATION_JOBS }o--|| USERS : "executed_by"
 ```
 
 ## Indexes
