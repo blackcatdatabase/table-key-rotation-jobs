@@ -2,7 +2,7 @@
 
 ![SQL](https://img.shields.io/badge/SQL-MySQL%208.0%2B-4479A1?logo=mysql&logoColor=white) ![License](https://img.shields.io/badge/license-BlackCat%20Proprietary-red) ![Status](https://img.shields.io/badge/status-stable-informational) ![Generated](https://img.shields.io/badge/generated-from%20schema--map-blue)
 
-> Schema package for table **key_rotation_jobs** (repo: $slug).
+> Schema package for table **key_rotation_jobs** (repo: `key-rotation-jobs`).
 
 ## Files
 ```
@@ -43,7 +43,7 @@ mysql -h 127.0.0.1 -P 3307 -u root -proot app < schema/030_foreign_keys.sql
 | scheduled_at | DATETIME(6) | YES | — |  |
 | started_at | DATETIME(6) | YES | — |  |
 | finished_at | DATETIME(6) | YES | — |  |
-| status | ENUM(''pending'',''running'',''done'',''failed'',''cancelled'') | NO | '' |  |
+| status | ENUM('pending','running','done','failed','cancelled') | NO | '' |  |
 | attempts | INT | NO | 0 |  |
 | executed_by | BIGINT UNSIGNED | YES | — |  |
 | result | TEXT | YES | — |  |
@@ -55,17 +55,17 @@ mysql -h 127.0.0.1 -P 3307 -u root -proot app < schema/030_foreign_keys.sql
 ```mermaid
 erDiagram
   KEY_ROTATION_JOBS {
-    BIGINT id PK
-    VARCHAR(100) basename
+    INT id PK
+    VARCHAR basename
     INT target_version
-    DATETIME(6) scheduled_at
-    DATETIME(6) started_at
-    DATETIME(6) finished_at
-    ENUM(''pending'',''running'',''done'',''failed'',''cancelled'') status
+    DATETIME scheduled_at
+    DATETIME started_at
+    DATETIME finished_at
+    ENUM status
     INT attempts
-    BIGINT executed_by
-    TEXT result
-    DATETIME(6) created_at
+    INT executed_by
+    VARCHAR result
+    DATETIME created_at
   }
   KEY_ROTATION_JOBS }o--|| USERS : "executed_by"
 ```
