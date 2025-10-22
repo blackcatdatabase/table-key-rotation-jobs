@@ -45,7 +45,7 @@ mysql -h 127.0.0.1 -P 3307 -u root -proot app < schema/030_foreign_keys.sql
 | scheduled_at | DATETIME(6) | YES | — |  |
 | started_at | DATETIME(6) | YES | — |  |
 | finished_at | DATETIME(6) | YES | — |  |
-| status | ENUM('pending','running','done','failed','cancelled') | NO | '' |  |
+| status | ENUM('pending','running','done','failed','cancelled') | NO | 'pending' |  |
 | attempts | INT | NO | 0 |  |
 | executed_by | BIGINT UNSIGNED | YES | — |  |
 | result | TEXT | YES | — |  |

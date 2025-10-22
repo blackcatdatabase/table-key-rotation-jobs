@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS key_rotation_jobs (
   scheduled_at DATETIME(6) NULL,
   started_at DATETIME(6) NULL,
   finished_at DATETIME(6) NULL,
-  status ENUM(''pending'',''running'',''done'',''failed'',''cancelled'') NOT NULL DEFAULT ''pending'',
+  status ENUM('pending','running','done','failed','cancelled') NOT NULL DEFAULT 'pending',
   attempts INT NOT NULL DEFAULT 0,
   executed_by BIGINT UNSIGNED NULL,
   result TEXT NULL,
