@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace BlackCat\Database\Packages\KeyRotationJobs\Service;
 
-use BlackCat\Core\Database\Database;
+use BlackCat\Core\Database;
 use BlackCat\Database\Packages\KeyRotationJobs\Dto\KeyRotationJobDto;
 use BlackCat\Database\Packages\KeyRotationJobs\Mapper\KeyRotationJobDtoMapper;
 use BlackCat\Database\Packages\KeyRotationJobs\Repository\KeyRotationJobRepository;
