@@ -6,7 +6,7 @@ namespace BlackCat\Database\Packages\KeyRotationJobs;
 final class Definitions {
     // --- základní metadata ---
     public static function table(): string { return 'key_rotation_jobs'; }
-    public static function contractView(): string { return 'v_key_rotation_jobs_contract'; }
+    public static function contractView(): string { return 'vw_key_rotation_jobs'; }
     /** @return string[] */
     public static function columns(): array { return [ 'id', 'basename', 'target_version', 'scheduled_at', 'started_at', 'finished_at', 'status', 'attempts', 'executed_by', 'result', 'created_at' ]; }
     public static function pk(): string { return 'id'; }

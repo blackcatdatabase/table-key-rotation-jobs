@@ -6,7 +6,7 @@ namespace BlackCat\Database\Packages\KeyRotationJobs;
 /**
  * Bezpečný builder WHERE/ORDER/LIMIT.
  * - whitelist filtrů: [ 'id', 'basename', 'target_version', 'scheduled_at', 'started_at', 'finished_at', 'status', 'attempts', 'executed_by', 'result', 'created_at' ]
- * - whitelist pro LIKE hledání: [ 'basename', 'result' ]
+ * - whitelist pro LIKE hledání: [ 'basename', 'status', 'result' ]
  */
 final class Criteria {
     /** @var array<string,mixed> */
@@ -61,7 +61,7 @@ final class Criteria {
 
         // fulltext/LIKE (přes whitelist)
         if ($this->search !== null) {
-            $searchCols = [ 'basename', 'result' ];
+            $searchCols = [ 'basename', 'status', 'result' ];
             $likeParts = [];
             foreach ($searchCols as $i=>$c) {
                 if ($c === '') continue;
