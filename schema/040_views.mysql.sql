@@ -1,8 +1,8 @@
--- Auto-generated from schema-views-mysql.psd1 (map@mtime:2025-10-24T09:19:46Z)
+-- Auto-generated from schema-views-mysql.psd1 (map@38d5403)
 -- engine: mysql
 -- table:  key_rotation_jobs
 -- Contract view for [key_rotation_jobs]
-CREATE OR REPLACE VIEW vw_key_rotation_jobs AS
+CREATE OR REPLACE SQL SECURITY INVOKER VIEW vw_key_rotation_jobs AS
 SELECT
   id,
   basename,

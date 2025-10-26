@@ -5,7 +5,7 @@ namespace BlackCat\Database\Packages\KeyRotationJobs\Dto;
 
 /**
  * Jednoduché, neměnné DTO s veřejnými readonly vlastnostmi.
- * - Žádná logika; pouze nosič dat.
+ * - Bez logiky; pouze nosič dat.
  * - Silné typy drží kontrakt napříč vrstvami.
  */
 final class KeyRotationJobDto {
@@ -23,9 +23,8 @@ final class KeyRotationJobDto {
         public readonly \DateTimeImmutable $createdAt
     ) {}
 
-    /** Vhodné pro serializaci/logování (bez binárních/velkých blobů). */
+    /** Vhodné pro serializaci/logování (bez velkých blobů). */
     public function toArray(): array {
-        // get_object_vars funguje dobře s public readonly vlastnostmi
         return get_object_vars($this);
     }
 }
