@@ -1,6 +1,7 @@
--- Auto-generated from schema-views-postgres.psd1 (map@62c9c93)
+-- Auto-generated from schema-views-postgres.psd1 (map@mtime:2025-11-27T15:36:13Z)
 -- engine: postgres
 -- table:  key_rotation_jobs
+
 -- Contract view for [key_rotation_jobs]
 CREATE OR REPLACE VIEW vw_key_rotation_jobs AS
 SELECT
