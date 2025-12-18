@@ -1,0 +1,41 @@
+{
+  "tables": {
+    "key_rotation_jobs": {
+      "columns": {
+        "attempts": {
+          "strategy": "passthrough"
+        },
+        "basename": {
+          "strategy": "passthrough"
+        },
+        "created_at": {
+          "strategy": "passthrough"
+        },
+        "executed_by": {
+          "strategy": "passthrough"
+        },
+        "finished_at": {
+          "strategy": "passthrough"
+        },
+        "id": {
+          "strategy": "passthrough"
+        },
+        "result": {
+          "strategy": "passthrough"
+        },
+        "scheduled_at": {
+          "strategy": "passthrough"
+        },
+        "started_at": {
+          "strategy": "passthrough"
+        },
+        "status": {
+          "strategy": "passthrough"
+        },
+        "target_version": {
+          "strategy": "passthrough"
+        }
+      }
+    }
+  }
+}

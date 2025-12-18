@@ -3,19 +3,19 @@
 Planned and executed key rotation jobs.
 
 ## Columns
-| Column | Type | Null | Default | Description |
-| --- | --- | --- | --- | --- |
-| id | BIGINT | NO |  | Surrogate primary key. |
-| basename | VARCHAR(100) | NO |  | Key basename to rotate. |
-| target_version | mysql: INT / postgres: INTEGER | YES |  | Desired target version (nullable). |
-| scheduled_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | YES |  | Scheduled time (UTC). |
-| started_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | YES |  | Start time (UTC). |
-| finished_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | YES |  | Finish time (UTC). |
-| status | mysql: ENUM('pending','running','done','failed','cancelled') / postgres: TEXT | NO | pending | Job status. (enum: pending, running, done, failed, cancelled) |
-| attempts | mysql: INT / postgres: INTEGER | NO | 0 | Number of attempts. |
-| executed_by | BIGINT | YES |  | Operator user id (FK users.id), optional. |
-| result | TEXT | YES |  | Result/summary text. |
-| created_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | NO | CURRENT_TIMESTAMP(6) | Creation timestamp (UTC). |
+| Column | Type | Null | Default | Description | Crypto |
+| --- | --- | --- | --- | --- | --- |
+| id | BIGINT | NO |  | Surrogate primary key. |  |
+| basename | VARCHAR(100) | NO |  | Key basename to rotate. |  |
+| target_version | mysql: INT / postgres: INTEGER | YES |  | Desired target version (nullable). |  |
+| scheduled_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | YES |  | Scheduled time (UTC). |  |
+| started_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | YES |  | Start time (UTC). |  |
+| finished_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | YES |  | Finish time (UTC). |  |
+| status | mysql: ENUM('pending','running','done','failed','cancelled') / postgres: TEXT | NO | pending | Job status. (enum: pending, running, done, failed, cancelled) |  |
+| attempts | mysql: INT / postgres: INTEGER | NO | 0 | Number of attempts. |  |
+| executed_by | BIGINT | YES |  | Operator user id (FK users.id), optional. |  |
+| result | TEXT | YES |  | Result/summary text. |  |
+| created_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | NO | CURRENT_TIMESTAMP(6) | Creation timestamp (UTC). |  |
 
 ## Engine Details
 
